@@ -1,3 +1,12 @@
+# The purpose of this fork
+
+The purpose of this forked repository is to generate more correct Typescript types for GraphQL fields decorated with the skip/include directives. The changes add `| null` to type definitions where skip/include directives exist, as there is no guarantee the fields will be included during execution. These fixes are built with versions pre v0.17 since large, backwards incompatible changes were made in v0.17.
+
+Note:
+As of November 2021, this issue still does not seem to be resolved on even their latest version (apollo-codegen-typescript v0.40.7).
+A Github Issue about this was opened in January 2019 and can be tracked [here](https://github.com/apollographql/apollo-tooling/issues/888).
+Once a fix has been included, upgrading to the latest version of apollo tooling would be best. However, note that the backwards incompatible changes made in v0.17 will make upgrading difficult for consumers of prior versions.
+
 # Apollo GraphQL code generator
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg?maxAge=2592000)](https://raw.githubusercontent.com/apollographql/apollo-ios/master/LICENSE) [![npm](https://img.shields.io/npm/v/apollo-codegen.svg)](https://www.npmjs.com/package/apollo-codegen) [![Get on Slack](https://img.shields.io/badge/slack-join-orange.svg)](http://www.apollostack.com/#slack)
@@ -67,12 +76,13 @@ When using `apollo-codegen` with Typescript or Flow, make sure to add the `__typ
 
 If you're using a client like `apollo-client` that does this automatically for your GraphQL operations, pass in the -`-addTypename` option to `apollo-codegen` to make sure the generated Typescript and Flow types have the `__typename` field as well. This is required to ensure proper type generation support for `GraphQLUnionType` and `GraphQLInterfaceType` fields.
 
-### Why is the __typename field required?
+### Why is the \_\_typename field required?
 
 Using the type information from the GraphQL schema, we can infer the possible types for fields. However, in the case of a `GraphQLUnionType` or `GraphQLInterfaceType`, there are multiple types that are possible for that field. This is best modeled using a disjoint union with the `__typename`
 as the discriminant.
 
 For example, given a schema:
+
 ```graphql
 ...
 
@@ -116,28 +126,31 @@ Apollo Codegen will generate a union type for Character.
 
 ```javascript
 export type CharactersQuery = {
-  characters: Array<{
-    __typename: 'Human',
-    name: string,
-    homePlanet: ?string
-  } | {
-    __typename: 'Droid',
-    name: string,
-    primaryFunction: ?string
-  }>
-}
+  characters: Array<
+    | {
+        __typename: 'Human',
+        name: string,
+        homePlanet: ?string,
+      }
+    | {
+        __typename: 'Droid',
+        name: string,
+        primaryFunction: ?string,
+      }
+  >,
+};
 ```
 
 This type can then be used as follows to ensure that all possible types are handled:
 
 ```javascript
 function CharacterFigures({ characters }: CharactersQuery) {
-  return characters.map(character => {
-    switch(character.__typename) {
-      case "Human":
-        return <HumanFigure homePlanet={character.homePlanet} name={character.name} />
-      case "Droid":
-        return <DroidFigure primaryFunction={character.primaryFunction} name={character.name} />
+  return characters.map((character) => {
+    switch (character.__typename) {
+      case 'Human':
+        return <HumanFigure homePlanet={character.homePlanet} name={character.name} />;
+      case 'Droid':
+        return <DroidFigure primaryFunction={character.primaryFunction} name={character.name} />;
     }
   });
 }
