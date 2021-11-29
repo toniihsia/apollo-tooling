@@ -94,7 +94,26 @@ export function propertyDeclaration(generator: CodeGenerator, {
     if (isInput && isNullable) {
       generator.print('?')
     }
-    generator.print(`: ${typeName || type && typeNameFromGraphQLType(generator.context, type)}`);
+    const typeString = `: ${typeName || type && typeNameFromGraphQLType(generator.context, type)}`;
+    generator.print(typeString);
+    // For query input variables, we do not care to add the `| null` type because
+    // the optional operator `?` is a strong enough type.
+    //
+    // The generated typeNameFromGraphQLType will include `| null` if the GraphQL type
+    // for the field is nullable. If the field is not nullable, then the generated
+    // typeNameFromGraphQLType will not include `| null`.
+    //
+    // This becomes problematic for fields that are decoratied with a
+    // directive that makes it nullabe (e.g. skip/include).
+    // We should treat fields that are not in closures the same as
+    // fields that are in closures (above) and add `| null` if the field
+    // is flagged as nullable by our client.
+    //
+    // To avoid duplicate `| null` definitions, we will not add another `| null` if
+    // the generated typeNameFromGraphQLType already includes `| null`.
+    if (!isInput && isNullable && !typeString.endsWith("| null")) {
+      generator.print(' | null');
+    }
   }
   generator.print(',');
 }
