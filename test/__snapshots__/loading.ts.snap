@@ -1,57 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Validation should extract gql snippet from javascript file 1`] = `
-Object {
-  "definitions": Array [
-    Object {
-      "directives": Array [],
+{
+  "definitions": [
+    {
+      "directives": [],
       "kind": "OperationDefinition",
-      "loc": Object {
+      "loc": {
         "end": 105,
         "start": 3,
       },
-      "name": Object {
+      "name": {
         "kind": "Name",
-        "loc": Object {
+        "loc": {
           "end": 23,
           "start": 9,
         },
         "value": "HeroAndFriends",
       },
       "operation": "query",
-      "selectionSet": Object {
+      "selectionSet": {
         "kind": "SelectionSet",
-        "loc": Object {
+        "loc": {
           "end": 105,
           "start": 43,
         },
-        "selections": Array [
-          Object {
+        "selections": [
+          {
             "alias": null,
-            "arguments": Array [
-              Object {
+            "arguments": [
+              {
                 "kind": "Argument",
-                "loc": Object {
+                "loc": {
                   "end": 71,
                   "start": 54,
                 },
-                "name": Object {
+                "name": {
                   "kind": "Name",
-                  "loc": Object {
+                  "loc": {
                     "end": 61,
                     "start": 54,
                   },
                   "value": "episode",
                 },
-                "value": Object {
+                "value": {
                   "kind": "Variable",
-                  "loc": Object {
+                  "loc": {
                     "end": 71,
                     "start": 63,
                   },
-                  "name": Object {
+                  "name": {
                     "kind": "Name",
-                    "loc": Object {
+                    "loc": {
                       "end": 71,
                       "start": 64,
                     },
@@ -60,37 +60,37 @@ Object {
                 },
               },
             ],
-            "directives": Array [],
+            "directives": [],
             "kind": "Field",
-            "loc": Object {
+            "loc": {
               "end": 101,
               "start": 49,
             },
-            "name": Object {
+            "name": {
               "kind": "Name",
-              "loc": Object {
+              "loc": {
                 "end": 53,
                 "start": 49,
               },
               "value": "hero",
             },
-            "selectionSet": Object {
+            "selectionSet": {
               "kind": "SelectionSet",
-              "loc": Object {
+              "loc": {
                 "end": 101,
                 "start": 73,
               },
-              "selections": Array [
-                Object {
-                  "directives": Array [],
+              "selections": [
+                {
+                  "directives": [],
                   "kind": "FragmentSpread",
-                  "loc": Object {
+                  "loc": {
                     "end": 95,
                     "start": 81,
                   },
-                  "name": Object {
+                  "name": {
                     "kind": "Name",
-                    "loc": Object {
+                    "loc": {
                       "end": 95,
                       "start": 84,
                     },
@@ -102,38 +102,38 @@ Object {
           },
         ],
       },
-      "variableDefinitions": Array [
-        Object {
+      "variableDefinitions": [
+        {
           "defaultValue": null,
           "kind": "VariableDefinition",
-          "loc": Object {
+          "loc": {
             "end": 41,
             "start": 24,
           },
-          "type": Object {
+          "type": {
             "kind": "NamedType",
-            "loc": Object {
+            "loc": {
               "end": 41,
               "start": 34,
             },
-            "name": Object {
+            "name": {
               "kind": "Name",
-              "loc": Object {
+              "loc": {
                 "end": 41,
                 "start": 34,
               },
               "value": "Episode",
             },
           },
-          "variable": Object {
+          "variable": {
             "kind": "Variable",
-            "loc": Object {
+            "loc": {
               "end": 32,
               "start": 24,
             },
-            "name": Object {
+            "name": {
               "kind": "Name",
-              "loc": Object {
+              "loc": {
                 "end": 32,
                 "start": 25,
               },
@@ -143,40 +143,40 @@ Object {
         },
       ],
     },
-    Object {
-      "directives": Array [],
+    {
+      "directives": [],
       "kind": "FragmentDefinition",
-      "loc": Object {
+      "loc": {
         "end": 242,
         "start": 109,
       },
-      "name": Object {
+      "name": {
         "kind": "Name",
-        "loc": Object {
+        "loc": {
           "end": 129,
           "start": 118,
         },
         "value": "heroDetails",
       },
-      "selectionSet": Object {
+      "selectionSet": {
         "kind": "SelectionSet",
-        "loc": Object {
+        "loc": {
           "end": 242,
           "start": 143,
         },
-        "selections": Array [
-          Object {
+        "selections": [
+          {
             "alias": null,
-            "arguments": Array [],
-            "directives": Array [],
+            "arguments": [],
+            "directives": [],
             "kind": "Field",
-            "loc": Object {
+            "loc": {
               "end": 153,
               "start": 149,
             },
-            "name": Object {
+            "name": {
               "kind": "Name",
-              "loc": Object {
+              "loc": {
                 "end": 153,
                 "start": 149,
               },
@@ -184,32 +184,32 @@ Object {
             },
             "selectionSet": null,
           },
-          Object {
-            "directives": Array [],
+          {
+            "directives": [],
             "kind": "InlineFragment",
-            "loc": Object {
+            "loc": {
               "end": 200,
               "start": 158,
             },
-            "selectionSet": Object {
+            "selectionSet": {
               "kind": "SelectionSet",
-              "loc": Object {
+              "loc": {
                 "end": 200,
                 "start": 171,
               },
-              "selections": Array [
-                Object {
+              "selections": [
+                {
                   "alias": null,
-                  "arguments": Array [],
-                  "directives": Array [],
+                  "arguments": [],
+                  "directives": [],
                   "kind": "Field",
-                  "loc": Object {
+                  "loc": {
                     "end": 194,
                     "start": 179,
                   },
-                  "name": Object {
+                  "name": {
                     "kind": "Name",
-                    "loc": Object {
+                    "loc": {
                       "end": 194,
                       "start": 179,
                     },
@@ -219,15 +219,15 @@ Object {
                 },
               ],
             },
-            "typeCondition": Object {
+            "typeCondition": {
               "kind": "NamedType",
-              "loc": Object {
+              "loc": {
                 "end": 170,
                 "start": 165,
               },
-              "name": Object {
+              "name": {
                 "kind": "Name",
-                "loc": Object {
+                "loc": {
                   "end": 170,
                   "start": 165,
                 },
@@ -235,32 +235,32 @@ Object {
               },
             },
           },
-          Object {
-            "directives": Array [],
+          {
+            "directives": [],
             "kind": "InlineFragment",
-            "loc": Object {
+            "loc": {
               "end": 238,
               "start": 205,
             },
-            "selectionSet": Object {
+            "selectionSet": {
               "kind": "SelectionSet",
-              "loc": Object {
+              "loc": {
                 "end": 238,
                 "start": 218,
               },
-              "selections": Array [
-                Object {
+              "selections": [
+                {
                   "alias": null,
-                  "arguments": Array [],
-                  "directives": Array [],
+                  "arguments": [],
+                  "directives": [],
                   "kind": "Field",
-                  "loc": Object {
+                  "loc": {
                     "end": 232,
                     "start": 226,
                   },
-                  "name": Object {
+                  "name": {
                     "kind": "Name",
-                    "loc": Object {
+                    "loc": {
                       "end": 232,
                       "start": 226,
                     },
@@ -270,15 +270,15 @@ Object {
                 },
               ],
             },
-            "typeCondition": Object {
+            "typeCondition": {
               "kind": "NamedType",
-              "loc": Object {
+              "loc": {
                 "end": 217,
                 "start": 212,
               },
-              "name": Object {
+              "name": {
                 "kind": "Name",
-                "loc": Object {
+                "loc": {
                   "end": 217,
                   "start": 212,
                 },
@@ -288,15 +288,15 @@ Object {
           },
         ],
       },
-      "typeCondition": Object {
+      "typeCondition": {
         "kind": "NamedType",
-        "loc": Object {
+        "loc": {
           "end": 142,
           "start": 133,
         },
-        "name": Object {
+        "name": {
           "kind": "Name",
-          "loc": Object {
+          "loc": {
             "end": 142,
             "start": 133,
           },
@@ -304,65 +304,65 @@ Object {
         },
       },
     },
-    Object {
-      "directives": Array [],
+    {
+      "directives": [],
       "kind": "OperationDefinition",
-      "loc": Object {
+      "loc": {
         "end": 299,
         "start": 251,
       },
-      "name": Object {
+      "name": {
         "kind": "Name",
-        "loc": Object {
+        "loc": {
           "end": 265,
           "start": 257,
         },
         "value": "HeroName",
       },
       "operation": "query",
-      "selectionSet": Object {
+      "selectionSet": {
         "kind": "SelectionSet",
-        "loc": Object {
+        "loc": {
           "end": 299,
           "start": 266,
         },
-        "selections": Array [
-          Object {
+        "selections": [
+          {
             "alias": null,
-            "arguments": Array [],
-            "directives": Array [],
+            "arguments": [],
+            "directives": [],
             "kind": "Field",
-            "loc": Object {
+            "loc": {
               "end": 295,
               "start": 272,
             },
-            "name": Object {
+            "name": {
               "kind": "Name",
-              "loc": Object {
+              "loc": {
                 "end": 276,
                 "start": 272,
               },
               "value": "hero",
             },
-            "selectionSet": Object {
+            "selectionSet": {
               "kind": "SelectionSet",
-              "loc": Object {
+              "loc": {
                 "end": 295,
                 "start": 277,
               },
-              "selections": Array [
-                Object {
+              "selections": [
+                {
                   "alias": null,
-                  "arguments": Array [],
-                  "directives": Array [],
+                  "arguments": [],
+                  "directives": [],
                   "kind": "Field",
-                  "loc": Object {
+                  "loc": {
                     "end": 289,
                     "start": 285,
                   },
-                  "name": Object {
+                  "name": {
                     "kind": "Name",
-                    "loc": Object {
+                    "loc": {
                       "end": 289,
                       "start": 285,
                     },
@@ -375,7 +375,7 @@ Object {
           },
         ],
       },
-      "variableDefinitions": Array [],
+      "variableDefinitions": [],
     },
   ],
   "kind": "Document",

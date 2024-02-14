@@ -6,7 +6,7 @@ exports[`Flow code generation #generateSource() should annotate custom scalars a
 
 export type CustomScalarQuery = {|
   misc: ? {|
-    __typename: \\"OddType\\",
+    __typename: "OddType",
     date: ?any,
   |},
 |};"
@@ -18,9 +18,9 @@ exports[`Flow code generation #generateSource() should generate correct typedefs
 
 // The episodes in the Star Wars trilogy
 export type Episode =
-  \\"NEWHOPE\\" | // Star Wars Episode IV: A New Hope, released in 1977.
-  \\"EMPIRE\\" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
-  \\"JEDI\\"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
+  "NEWHOPE" | // Star Wars Episode IV: A New Hope, released in 1977.
+  "EMPIRE" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
+  "JEDI"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
 
 
 export type HeroAndFriendsNamesQueryVariables = {|
@@ -29,31 +29,31 @@ export type HeroAndFriendsNamesQueryVariables = {|
 
 export type HeroAndFriendsNamesQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
       ) >,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
@@ -63,22 +63,22 @@ export type HeroAndFriendsNamesQuery = {|
 |};
 
 export type FriendFragment = ( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
     }
   );
 
 export type PersonFragment = ( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
     }
@@ -91,9 +91,9 @@ exports[`Flow code generation #generateSource() should generate correct typedefs
 
 // The episodes in the Star Wars trilogy
 export type Episode =
-  \\"NEWHOPE\\" | // Star Wars Episode IV: A New Hope, released in 1977.
-  \\"EMPIRE\\" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
-  \\"JEDI\\"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
+  "NEWHOPE" | // Star Wars Episode IV: A New Hope, released in 1977.
+  "EMPIRE" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
+  "JEDI"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
 
 
 export type HeroAndFriendsNamesQueryVariables = {|
@@ -102,31 +102,31 @@ export type HeroAndFriendsNamesQueryVariables = {|
 
 export type HeroAndFriendsNamesQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
       ) >,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
@@ -136,11 +136,11 @@ export type HeroAndFriendsNamesQuery = {|
 |};
 
 export type FriendFragment = ( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
     }
@@ -153,31 +153,31 @@ exports[`Flow code generation #generateSource() should generate fragmented query
 
 export type HeroAndFriendsNamesQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
       ) >,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
@@ -187,27 +187,27 @@ export type HeroAndFriendsNamesQuery = {|
 |};
 
 export type heroFriendsFragment = ( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
       ) >,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
@@ -222,9 +222,9 @@ exports[`Flow code generation #generateSource() should generate mutation operati
 
 // The episodes in the Star Wars trilogy
 export type Episode =
-  \\"NEWHOPE\\" | // Star Wars Episode IV: A New Hope, released in 1977.
-  \\"EMPIRE\\" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
-  \\"JEDI\\"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
+  "NEWHOPE" | // Star Wars Episode IV: A New Hope, released in 1977.
+  "EMPIRE" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
+  "JEDI"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
 
 
 export type ReviewInput = {|
@@ -249,7 +249,7 @@ export type ReviewMovieMutationVariables = {|
 
 export type ReviewMovieMutation = {|
   createReview: ? {|
-    __typename: \\"Review\\",
+    __typename: "Review",
     // The number of stars this review gave, 1-5
     stars: number,
     // Comment about the movie
@@ -264,14 +264,14 @@ exports[`Flow code generation #generateSource() should generate query operations
 
 export type HeroAndDetailsQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
-      // The name of the character
+      __typename: "Human",
+      // What this human calls themselves
       name: string,
       // Height in the preferred unit, default is meters
       height: ?number,
     } | {
-      __typename: \\"Droid\\",
-      // The name of the character
+      __typename: "Droid",
+      // What others call this droid
       name: string,
       // This droid's primary function
       primaryFunction: ?string,
@@ -280,11 +280,11 @@ export type HeroAndDetailsQuery = {|
 |};
 
 export type HeroDetailsFragment = ( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // Height in the preferred unit, default is meters
       height: ?number,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // This droid's primary function
       primaryFunction: ?string,
     }
@@ -297,9 +297,9 @@ exports[`Flow code generation #generateSource() should generate simple nested qu
 
 // The episodes in the Star Wars trilogy
 export type Episode =
-  \\"NEWHOPE\\" | // Star Wars Episode IV: A New Hope, released in 1977.
-  \\"EMPIRE\\" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
-  \\"JEDI\\"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
+  "NEWHOPE" | // Star Wars Episode IV: A New Hope, released in 1977.
+  "EMPIRE" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
+  "JEDI"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
 
 
 export type HeroAndFriendsNamesQueryVariables = {|
@@ -308,31 +308,31 @@ export type HeroAndFriendsNamesQueryVariables = {|
 
 export type HeroAndFriendsNamesQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
       ) >,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
       // The friends of the character, or an empty list if they have none
       friends: ?Array< ?( {
-          __typename: \\"Human\\",
+          __typename: "Human",
           // The name of the character
           name: string,
         } | {
-          __typename: \\"Droid\\",
+          __typename: "Droid",
           // The name of the character
           name: string,
         }
@@ -348,7 +348,7 @@ exports[`Flow code generation #generateSource() should generate simple nested wi
 
 export type StarshipCoordsQuery = {|
   starship: ? {|
-    __typename: \\"Starship\\",
+    __typename: "Starship",
     coordinates: ?Array< Array< number > >,
   |},
 |};"
@@ -360,11 +360,11 @@ exports[`Flow code generation #generateSource() should generate simple query ope
 
 export type HeroNameQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
     }
@@ -378,9 +378,9 @@ exports[`Flow code generation #generateSource() should generate simple query ope
 
 // The episodes in the Star Wars trilogy
 export type Episode =
-  \\"NEWHOPE\\" | // Star Wars Episode IV: A New Hope, released in 1977.
-  \\"EMPIRE\\" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
-  \\"JEDI\\"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
+  "NEWHOPE" | // Star Wars Episode IV: A New Hope, released in 1977.
+  "EMPIRE" | // Star Wars Episode V: The Empire Strikes Back, released in 1980.
+  "JEDI"; // Star Wars Episode VI: Return of the Jedi, released in 1983.
 
 
 export type HeroNameQueryVariables = {|
@@ -389,11 +389,11 @@ export type HeroNameQueryVariables = {|
 
 export type HeroNameQuery = {|
   hero: ?( {
-      __typename: \\"Human\\",
+      __typename: "Human",
       // The name of the character
       name: string,
     } | {
-      __typename: \\"Droid\\",
+      __typename: "Droid",
       // The name of the character
       name: string,
     }
@@ -406,15 +406,15 @@ exports[`Flow code generation #generateSource() should handle comments in enums 
 //  This file was automatically generated and should not be edited.
 
 export type EnumCommentTestCase =
-  \\"first\\" | // This is a single-line comment
+  "first" | // This is a single-line comment
   // This is a multi-line
   // comment.
-  \\"second\\";
+  "second";
 
 
 export type CustomScalarQuery = {|
   commentTest: ? {|
-    __typename: \\"CommentTest\\",
+    __typename: "CommentTest",
     enumCommentTest: ?EnumCommentTestCase,
   |},
 |};"
@@ -426,11 +426,11 @@ exports[`Flow code generation #generateSource() should handle interfaces at root
 
 export type CustomScalarQuery = {|
   interfaceTest: ?( {
-      __typename: \\"ImplA\\",
+      __typename: "ImplA",
       prop: string,
       propA: string,
     } | {
-      __typename: \\"ImplB\\",
+      __typename: "ImplB",
       prop: string,
       propB: ?number,
     }
@@ -444,7 +444,7 @@ exports[`Flow code generation #generateSource() should handle multi-line comment
 
 export type CustomScalarQuery = {|
   commentTest: ? {|
-    __typename: \\"CommentTest\\",
+    __typename: "CommentTest",
     // This is a multi-line
     // comment.
     multiLine: ?string,
@@ -467,7 +467,7 @@ exports[`Flow code generation #generateSource() should handle single line commen
 
 export type CustomScalarQuery = {|
   commentTest: ? {|
-    __typename: \\"CommentTest\\",
+    __typename: "CommentTest",
     // This is a single-line comment
     singleLine: ?string,
   |},
@@ -480,10 +480,10 @@ exports[`Flow code generation #generateSource() should handle unions at root 1`]
 
 export type CustomScalarQuery = {|
   unionTest: ?( {
-      __typename: \\"PartialA\\",
+      __typename: "PartialA",
       prop: string,
     } | {
-      __typename: \\"PartialB\\",
+      __typename: "PartialB",
       prop: string,
     }
   ),

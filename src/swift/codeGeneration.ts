@@ -23,8 +23,6 @@ import { collectFragmentsReferenced } from '../compiler/visitors/collectFragment
 import { generateOperationId } from '../compiler/visitors/generateOperationId';
 import { collectAndMergeFields } from '../compiler/visitors/collectAndMergeFields';
 
-import '../utilities/array';
-
 export interface Options {
   namespace?: string;
   passthroughCustomScalars?: boolean;

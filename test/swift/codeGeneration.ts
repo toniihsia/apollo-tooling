@@ -18,7 +18,7 @@ describe('Swift code generation', () => {
   let generator: SwiftAPIGenerator;
 
   beforeEach(() => {
-    generator = new SwiftAPIGenerator({});
+    generator = new SwiftAPIGenerator({} as any);
   });
 
   function compile(

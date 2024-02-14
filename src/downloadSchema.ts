@@ -19,7 +19,7 @@ export default async function downloadSchema(url: string, outputPath: string, ad
   const headers: { [index: string]: string } = Object.assign(defaultHeaders, additionalHeaders);
   const agent = insecure ? new https.Agent({ rejectUnauthorized: false }) : undefined;
 
-  let result;
+  let result: any;
   try {
     const response = await fetch(url, {
       method: method,
@@ -29,8 +29,10 @@ export default async function downloadSchema(url: string, outputPath: string, ad
     });
 
     result = await response.json();
-  } catch (error) {
-    throw new ToolError(`Error while fetching introspection query result: ${error.message}`);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new ToolError(`Error while fetching introspection query result: ${error.message}`);
+    }
   }
 
   if (result.errors) {

@@ -7,8 +7,6 @@ import { generateOperationId } from './visitors/generateOperationId';
 import { TypeCase } from './visitors/typeCase';
 import { collectAndMergeFields } from './visitors/collectAndMergeFields';
 
-import '../utilities/array';
-
 export interface CompilerOptions {
   addTypename?: boolean;
   mergeInFieldsFromFragmentSpreads?: boolean;
@@ -172,7 +170,7 @@ class LegacyIRTransformer {
         // Filter out empty records for consistency with legacy compiler.
         fields.length < 1
       )
-        return undefined;
+        return [];
 
       const fragmentSpreads: string[] = this.collectFragmentSpreads(selectionSet, variant.possibleTypes).map(
         (fragmentSpread: FragmentSpread) => fragmentSpread.fragmentName
@@ -188,7 +186,9 @@ class LegacyIRTransformer {
     });
 
     for (const inlineFragment of inlineFragments) {
-      inlineFragments[inlineFragment.typeCondition.name as any] = inlineFragment;
+      if (inlineFragment) {
+        inlineFragments[inlineFragment.typeCondition.name as any] = inlineFragment;
+      }
     }
 
     const fragmentSpreads: string[] = this.collectFragmentSpreads(selectionSet).map(
